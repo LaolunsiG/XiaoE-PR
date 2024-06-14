@@ -43,7 +43,7 @@ proxy-providers:
       interval: 600
   机场4:
     type: http
-    url: "https://oss.pithecia.com/api/v1/client/subscribe?token=854979b4c30d38234d0aad0caac92ad9"
+    url: "https://raw.githubusercontent.com/yaney01/Yaney01/main/temporary"
     path: ./proxies/airport4.yaml
     interval: 43200
     health-check:
