@@ -1,4 +1,4 @@
-#描述：非加密DNS
+#非加密DNS
 #代理集
 proxy-providers:
   机场1:
