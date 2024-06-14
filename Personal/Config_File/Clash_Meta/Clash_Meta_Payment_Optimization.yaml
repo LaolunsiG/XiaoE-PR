@@ -6,7 +6,7 @@ proxy-providers:
   机场1:
     type: http
     # 机场订阅链接，使用 Clash 链接
-    url: ""
+    url: "https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash"
     path: ./proxies/airport1.yaml
     interval: 43200
     # 初步筛选需要的节点，可有效减轻路由器压力，支持正则表达式，不筛选可删除此配置项
@@ -18,7 +18,7 @@ proxy-providers:
       interval: 600
   机场2:
     type: http
-    url: ""
+    url: "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/ssr"
     path: ./proxies/airport2.yaml
     interval: 43200
     health-check:
@@ -28,7 +28,7 @@ proxy-providers:
       interval: 600
   机场3:
     type: http
-    url: ""
+    url: "https://yellowsea.xn--9kqa348u.org/api/v1/client/subscribe?token=918a5b2ffa256cea273acf49568de8df"
     path: ./proxies/airport3.yaml
     interval: 43200
     health-check:
@@ -38,7 +38,7 @@ proxy-providers:
       interval: 600
   机场4:
     type: http
-    url: ""
+    url: "https://oss.pithecia.com/api/v1/client/subscribe?token=854979b4c30d38234d0aad0caac92ad9"
     path: ./proxies/airport4.yaml
     interval: 43200
     health-check:
@@ -48,7 +48,7 @@ proxy-providers:
       interval: 600
   机场5:
     type: http
-    url: ""
+    url: "https://api.yuansu.app/api/v1/client/subscribe?token=d77acbf253b0485765e7516dddfa19bd"
     path: ./proxies/airport5.yaml
     interval: 43200
     health-check:
@@ -60,7 +60,7 @@ proxy-providers:
   机场6:
     type: http
     # 机场订阅链接，使用 Clash 链接
-    url: ""
+    url: "https://dy.chaozhijc.xyz/api/v1/client/subscribe?token=0d8e8103c190113eb3e110b7e5f8f087"
     path: ./proxies/airport6.yaml
     interval: 43200
     # 初步筛选需要的节点，可有效减轻路由器压力，支持正则表达式，不筛选可删除此配置项
@@ -72,7 +72,7 @@ proxy-providers:
       interval: 600
   机场7:
     type: http
-    url: ""
+    url: "http://api.zzzzzl.me/api/v1/client/subscribe?token=97b91df444afd8e91fe143412e41e5aa"
     path: ./proxies/airport7.yaml
     interval: 43200
     health-check:
@@ -82,7 +82,7 @@ proxy-providers:
       interval: 600
   机场8:
     type: http
-    url: ""
+    url: "https://flynb.site/sub?token=F9F9zZcllpdyN5TluF9F9zZF9F9zZ11EEfx0g&tag=Clash"
     path: ./proxies/airport8.yaml
     interval: 43200
     health-check:
@@ -92,7 +92,7 @@ proxy-providers:
       interval: 600
   机场9:
     type: http
-    url: ""
+    url: "https://raw.githubusercontent.com/zhangkaiitugithub/passcro/main/speednodes.yaml"
     path: ./proxies/airport9.yaml
     interval: 43200
     health-check:
@@ -102,7 +102,7 @@ proxy-providers:
       interval: 600
   机场10:
     type: http
-    url: ""
+    url: "https://raw.githubusercontent.com/gitbigg/dy/main/jd"
     path: ./proxies/airport10.yaml
     interval: 43200
     health-check:
