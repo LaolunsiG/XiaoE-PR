@@ -60,7 +60,7 @@ proxy-providers:
   机场6:
     type: http
     # 机场订阅链接，使用 Clash 链接
-    url: "https://dy.chaozhijc.xyz/api/v1/client/subscribe?token=0d8e8103c190113eb3e110b7e5f8f087"
+    url: "https://sub.tgzdyz2.xyz/sub"
     path: ./proxies/airport6.yaml
     interval: 43200
     # 初步筛选需要的节点，可有效减轻路由器压力，支持正则表达式，不筛选可删除此配置项
@@ -102,7 +102,7 @@ proxy-providers:
       interval: 600
   机场10:
     type: http
-    url: "https://raw.githubusercontent.com/gitbigg/dy/main/jd"
+    url: "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/vmess"
     path: ./proxies/airport10.yaml
     interval: 43200
     health-check:
