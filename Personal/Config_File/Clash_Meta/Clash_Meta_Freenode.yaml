@@ -263,7 +263,7 @@ dns:
     - '+.n0808.com'
     - '+.3gppnetwork.org'
   nameserver:
-    - 8.8.8.8
+    - 154.12.37.236
     - 223.5.5.5
     - 1.1.1.1
     - 114.114.114.114
@@ -300,9 +300,9 @@ proxy-groups:
 #下载网络
   - {name: 🌐 Download,type: select, proxies: [🎯 全球直连, 🚀 节点选择, 香港, 台湾, 日本, 新加坡, 美国, 加拿大, 德国, 英国, 印度]}
 #服务平台
-  - {name: Ⓜ️ 微软服务, type: select, proxies: [🎯 全球直连, 🚀 节点选择]}
+  - {name: Ⓜ️ 微软服务, type: select, proxies: [🎯 全球直连, 🚀 节点选择, 香港, 台湾, 日本, 新加坡, 美国, 加拿大, 德国, 英国, 印度]}
   - {name: 📢 谷歌服务, type: select, proxies: [🚀 节点选择, 香港, 台湾, 日本, 新加坡, 美国, 加拿大, 德国, 英国, 印度]}
-  - {name: 🍎 苹果服务, type: select, proxies: [🎯 全球直连, 🚀 节点选择]}
+  - {name: 🍎 苹果服务, type: select, proxies: [🎯 全球直连, 🚀 节点选择, 香港, 台湾, 日本, 新加坡, 美国, 加拿大, 德国, 英国, 印度]}
 #聊天平台
   - {name: 💬 Facebook, type: select, proxies: [香港, 🚀 节点选择, 台湾, 日本, 新加坡, 美国, 加拿大, 德国, 英国, 印度]} 
   - {name: 💬 Twitter, type: select, proxies: [🚀 节点选择, 香港, 台湾, 日本, 新加坡, 美国, 加拿大, 德国, 英国, 印度]}
