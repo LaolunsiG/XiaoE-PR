@@ -233,8 +233,8 @@ proxy-groups:
 #人工智能
   - {name: 🤖 人工智能, type: select, proxies: [美国, 香港, 日本, 新加坡, 🚀 节点选择, 台湾, 加拿大, 德国, 英国]}
 #服务平台
-  - {name: Ⓜ️ 微软服务, type: select, proxies: [🎯 全球直连, 🚀 节点选择]}
-  - {name: 🍎 苹果服务, type: select, proxies: [🎯 全球直连, 🚀 节点选择]}
+  - {name: Ⓜ️ 微软服务, type: select, proxies: [🎯 全球直连, 🚀 节点选择, 香港, 台湾, 日本, 新加坡, 美国]}
+  - {name: 🍎 苹果服务, type: select, proxies: [🎯 全球直连, 🚀 节点选择, 香港, 台湾, 日本, 新加坡, 美国]}
 #下载网络
   - {name: 🌐 Download,type: select, proxies: [🎯 全球直连, 🚀 节点选择, 香港, 台湾, 日本, 新加坡, 美国]}
 #社交平台
