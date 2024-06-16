@@ -23,7 +23,7 @@ proxy-providers:
       interval: 600
   机场2:
     type: http
-    url: "https://cdn.jsdelivr.net/gh/vxiaov/free_proxies@main/clash/clash.provider.yaml"
+    url: "https://api.ytools.cc/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2Fwentao883%2FTG-wxgqlfx_BYDY%2Fmain%2Fpdyjdy_BYDY&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_NoAuto.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true"
     path: ./proxies/airport2.yaml
     interval: 43200
     health-check:
