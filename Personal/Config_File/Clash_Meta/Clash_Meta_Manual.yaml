@@ -13,7 +13,8 @@ NodeParam: &NodeParam {type: http, interval: 43200, health-check: {enable: true,
 proxy-providers:
   机场1:
     url: "https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash"
-    <<: *NodeParam #使用上述订阅配置
+#使用上述订阅配置
+    <<: *NodeParam 
     path: ./proxies/airport1.yaml
     override:
       additional-prefix: "[机场名称1]" # 为订阅节点添加机场名称前缀
