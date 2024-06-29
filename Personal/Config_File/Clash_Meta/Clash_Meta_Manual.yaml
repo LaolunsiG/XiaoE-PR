@@ -10,7 +10,6 @@
 NodeParam: &NodeParam {type: http, interval: 43200, health-check: {enable: true, lazy: true, url: 'http://www.google.com/generate_204', interval: 600}}
 
 #代理集
-#代理集
 proxy-providers:
   机场1:
     url: "https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash"
