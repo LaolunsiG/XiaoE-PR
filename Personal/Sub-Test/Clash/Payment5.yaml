@@ -1,9 +1,9 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2024-06-14 16:19:26
+# 创建时间：2024-06-29 20:42:04
 # 使用模版：V2RaySE 默认模版
-# 节点数量：10
+# 节点数量：39
 ####################################
 mixed-port: 7890
 allow-lan: true
@@ -85,109 +85,312 @@ dns:
       - 0.0.0.0/32
 
 proxies:
-  - {"name":"🇰🇷 |KR|韩国|@wxgqlfx|26","type":"trojan","server":"61.247.83.116","port":39308,"udp":true,"password":"NISHIKUITAN222","sni":"t033.ylks.link","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
-  - {"name":"🇺🇸 |US|美国|@wxgqlfx|126","type":"trojan","server":"43.153.80.208","port":443,"udp":true,"password":"NISHIKUITAN222","sni":"t033.ylks.link","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
-  - {"name":"🇺🇸 |US|美国|@wxgqlfx|226","type":"trojan","server":"47.236.102.102","port":8443,"udp":true,"password":"NISHIKUITAN222","sni":"t033.ylks.link","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
-  - {"name":"🇺🇸 |US|美国|@wxgqlfx|232","type":"trojan","server":"47.236.158.158","port":8443,"udp":true,"password":"NISHIKUITAN222","sni":"t033.ylks.link","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
-  - {"name":"🇺🇸 |US|美国|@wxgqlfx|237","type":"trojan","server":"47.236.253.41","port":8443,"udp":true,"password":"NISHIKUITAN222","sni":"t033.ylks.link","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
-  - {"name":"🇺🇸 |US|美国|@wxgqlfx|241","type":"trojan","server":"47.236.254.120","port":8443,"udp":true,"password":"NISHIKUITAN222","sni":"t033.ylks.link","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
-  - {"name":"🇸🇬 |SG|新加坡|@wxgqlfx|246","type":"trojan","server":"8.222.191.138","port":8443,"udp":true,"password":"NISHIKUITAN222","sni":"t033.ylks.link","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
-  - {"name":"🇺🇸 |US|美国|@wxgqlfx|247","type":"trojan","server":"47.236.117.48","port":8443,"udp":true,"password":"NISHIKUITAN222","sni":"t033.ylks.link","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
-  - {"name":"🇸🇬 |SG|新加坡|@wxgqlfx|249","type":"trojan","server":"8.219.191.40","port":8443,"udp":true,"password":"NISHIKUITAN222","sni":"t033.ylks.link","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
-  - {"name":"🇺🇸 |US|美国|@wxgqlfx|288","type":"trojan","server":"47.236.170.225","port":8443,"udp":true,"password":"NISHIKUITAN222","sni":"t033.ylks.link","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"CN_speednode_0002","type":"vmess","server":"120.232.153.71","port":35972,"cipher":"auto","uuid":"770ee730-2450-4e3c-a6c6-3932bd32afbd","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_speednode_0003","type":"vmess","server":"183.240.235.164","port":32998,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_speednode_0004","type":"vmess","server":"183.240.235.162","port":54002,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_speednode_0005","type":"vmess","server":"120.232.153.27","port":50582,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_speednode_0006","type":"vmess","server":"120.232.153.27","port":34002,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_speednode_0007","type":"vmess","server":"183.240.235.162","port":36002,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_speednode_0008","type":"vmess","server":"183.236.51.23","port":54100,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_speednode_0009","type":"vmess","server":"120.232.153.71","port":35972,"cipher":"auto","uuid":"770ee730-2450-4e3c-a6c6-3932bd32afbd","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_speednode_0010","type":"vmess","server":"183.240.235.164","port":32998,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_speednode_0011","type":"ss","server":"59.56.77.178","port":15083,"password":"hGkQ6915tD","cipher":"aes-256-cfb"}
+  - {"name":"CN_speednode_0012","type":"vmess","server":"120.232.153.40","port":40259,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_speednode_0013","type":"vmess","server":"120.232.240.56","port":16928,"cipher":"auto","uuid":"5f6b3c3f-b0a8-33f5-95c6-371f8c6af973","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/v2ray"}}
+  - {"name":"CN_speednode_0014","type":"vmess","server":"120.232.153.71","port":54965,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_speednode_0015","type":"trojan","server":"183.232.139.22","port":4027,"udp":true,"password":"gkviEOYc","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_speednode_0016","type":"ss","server":"59.56.77.178","port":15083,"password":"hGkQ6915tD","cipher":"aes-256-cfb"}
+  - {"name":"CN_speednode_0017","type":"vmess","server":"120.232.240.56","port":16928,"cipher":"auto","uuid":"5f6b3c3f-b0a8-33f5-95c6-371f8c6af973","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/v2ray"}}
+  - {"name":"defaultName_1","type":"http","server":"81.70.55.129","port":33210}
+  - {"name":"CN_speednode_0019","type":"vmess","server":"183.240.235.162","port":54882,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"defaultName_2","type":"http","server":"42.194.187.178","port":33210}
+  - {"name":"CN_speednode_0021","type":"vmess","server":"183.240.235.170","port":44602,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":""}
+  - {"name":"CN_speednode_0022","type":"vmess","server":"120.232.153.27","port":34002,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_speednode_0023","type":"vmess","server":"183.240.235.162","port":36002,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"defaultName_3","type":"http","server":"81.70.55.129","port":33210}
+  - {"name":"CN_speednode_0025","type":"ss","server":"59.56.77.178","port":15111,"password":"hGkQ6915tD","cipher":"aes-256-cfb"}
+  - {"name":"defaultName_4","type":"http","server":"221.216.40.40","port":5050}
+  - {"name":"CN_speednode_0029","type":"vmess","server":"183.236.51.23","port":45020,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_speednode_0030","type":"vmess","server":"183.240.235.162","port":54002,"cipher":"auto","uuid":"418048af-a293-4b99-9b0c-98ca3580dd24","alterId":64,"tls":false,"skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_speednode_0032","type":"trojan","server":"183.232.139.22","port":50611,"udp":true,"password":"gkviEOYc","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_speednode_0034","type":"ss","server":"59.56.77.178","port":15111,"password":"hGkQ6915tD","cipher":"aes-256-cfb"}
+  - {"name":"CN_speednode_0036","type":"vmess","server":"120.232.240.56","port":16928,"cipher":"auto","uuid":"5f6b3c3f-b0a8-33f5-95c6-371f8c6af973","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/v2ray"}}
+  - {"name":"CN_speednode_0038","type":"trojan","server":"183.232.139.22","port":50611,"udp":true,"password":"gkviEOYc","skip-cert-verify":true,"network":"tcp"}
+  - {"name":"CN_speednode_0039","type":"vmess","server":"120.232.240.56","port":16928,"cipher":"none","uuid":"5f6b3c3f-b0a8-33f5-95c6-371f8c6af973","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/v2ray"}}
+  - {"name":"FR_speednode_0085","type":"ss","server":"172.232.37.114","port":80,"password":"Zg9HJ8NpUH6c2IwEKY0cwg","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"FR_speednode_0087","type":"vmess","server":"54.38.217.125","port":30000,"cipher":"auto","uuid":"9d681db5-4396-47ee-96ec-bd53fd0a9e78","alterId":64,"tls":true,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/path/181721272114"}}
+  - {"name":"GB_speednode_0093","type":"trojan","server":"164.38.155.61","port":443,"udp":true,"password":"TeleGram-VPNCTVIP","sni":"trojan-ws.vpnctvip.dns-dynamic.NeT","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/proxyIP=proxyip.us.fxxk.dedyn.io"}}
+  - {"name":"GB_speednode_0094","type":"trojan","server":"164.38.155.61","port":443,"udp":true,"password":"TeleGram-VPNCTVIP","sni":"trojan-ws.vpnctvip.dns-dynamic.NeT","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/proxyIP=proxyip.us.fxxk.dedyn.io"}}
+  - {"name":"KR_speednode_0167","type":"trojan","server":"116.47.10.236","port":27335,"udp":true,"password":"moist","sni":"trojan.freenods.sbs","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"KR_speednode_0168","type":"trojan","server":"116.47.10.236","port":27335,"udp":true,"password":"moist","sni":"trojan.freenods.sbs","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
+  - {"name":"KR_speednode_0177","type":"trojan","server":"116.47.10.236","port":27335,"udp":true,"password":"moist","sni":"trojan.freenods.sbs","skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/"}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇰🇷 |KR|韩国|@wxgqlfx|26
-      - 🇺🇸 |US|美国|@wxgqlfx|126
-      - 🇺🇸 |US|美国|@wxgqlfx|226
-      - 🇺🇸 |US|美国|@wxgqlfx|232
-      - 🇺🇸 |US|美国|@wxgqlfx|237
-      - 🇺🇸 |US|美国|@wxgqlfx|241
-      - 🇸🇬 |SG|新加坡|@wxgqlfx|246
-      - 🇺🇸 |US|美国|@wxgqlfx|247
-      - 🇸🇬 |SG|新加坡|@wxgqlfx|249
-      - 🇺🇸 |US|美国|@wxgqlfx|288
+      - CN_speednode_0002
+      - CN_speednode_0003
+      - CN_speednode_0004
+      - CN_speednode_0005
+      - CN_speednode_0006
+      - CN_speednode_0007
+      - CN_speednode_0008
+      - CN_speednode_0009
+      - CN_speednode_0010
+      - CN_speednode_0011
+      - CN_speednode_0012
+      - CN_speednode_0013
+      - CN_speednode_0014
+      - CN_speednode_0015
+      - CN_speednode_0016
+      - CN_speednode_0017
+      - defaultName_1
+      - CN_speednode_0019
+      - defaultName_2
+      - CN_speednode_0021
+      - CN_speednode_0022
+      - CN_speednode_0023
+      - defaultName_3
+      - CN_speednode_0025
+      - defaultName_4
+      - CN_speednode_0029
+      - CN_speednode_0030
+      - CN_speednode_0032
+      - CN_speednode_0034
+      - CN_speednode_0036
+      - CN_speednode_0038
+      - CN_speednode_0039
+      - FR_speednode_0085
+      - FR_speednode_0087
+      - GB_speednode_0093
+      - GB_speednode_0094
+      - KR_speednode_0167
+      - KR_speednode_0168
+      - KR_speednode_0177
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🇰🇷 |KR|韩国|@wxgqlfx|26
-      - 🇺🇸 |US|美国|@wxgqlfx|126
-      - 🇺🇸 |US|美国|@wxgqlfx|226
-      - 🇺🇸 |US|美国|@wxgqlfx|232
-      - 🇺🇸 |US|美国|@wxgqlfx|237
-      - 🇺🇸 |US|美国|@wxgqlfx|241
-      - 🇸🇬 |SG|新加坡|@wxgqlfx|246
-      - 🇺🇸 |US|美国|@wxgqlfx|247
-      - 🇸🇬 |SG|新加坡|@wxgqlfx|249
-      - 🇺🇸 |US|美国|@wxgqlfx|288
+      - CN_speednode_0002
+      - CN_speednode_0003
+      - CN_speednode_0004
+      - CN_speednode_0005
+      - CN_speednode_0006
+      - CN_speednode_0007
+      - CN_speednode_0008
+      - CN_speednode_0009
+      - CN_speednode_0010
+      - CN_speednode_0011
+      - CN_speednode_0012
+      - CN_speednode_0013
+      - CN_speednode_0014
+      - CN_speednode_0015
+      - CN_speednode_0016
+      - CN_speednode_0017
+      - defaultName_1
+      - CN_speednode_0019
+      - defaultName_2
+      - CN_speednode_0021
+      - CN_speednode_0022
+      - CN_speednode_0023
+      - defaultName_3
+      - CN_speednode_0025
+      - defaultName_4
+      - CN_speednode_0029
+      - CN_speednode_0030
+      - CN_speednode_0032
+      - CN_speednode_0034
+      - CN_speednode_0036
+      - CN_speednode_0038
+      - CN_speednode_0039
+      - FR_speednode_0085
+      - FR_speednode_0087
+      - GB_speednode_0093
+      - GB_speednode_0094
+      - KR_speednode_0167
+      - KR_speednode_0168
+      - KR_speednode_0177
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇰🇷 |KR|韩国|@wxgqlfx|26
-      - 🇺🇸 |US|美国|@wxgqlfx|126
-      - 🇺🇸 |US|美国|@wxgqlfx|226
-      - 🇺🇸 |US|美国|@wxgqlfx|232
-      - 🇺🇸 |US|美国|@wxgqlfx|237
-      - 🇺🇸 |US|美国|@wxgqlfx|241
-      - 🇸🇬 |SG|新加坡|@wxgqlfx|246
-      - 🇺🇸 |US|美国|@wxgqlfx|247
-      - 🇸🇬 |SG|新加坡|@wxgqlfx|249
-      - 🇺🇸 |US|美国|@wxgqlfx|288
+      - CN_speednode_0002
+      - CN_speednode_0003
+      - CN_speednode_0004
+      - CN_speednode_0005
+      - CN_speednode_0006
+      - CN_speednode_0007
+      - CN_speednode_0008
+      - CN_speednode_0009
+      - CN_speednode_0010
+      - CN_speednode_0011
+      - CN_speednode_0012
+      - CN_speednode_0013
+      - CN_speednode_0014
+      - CN_speednode_0015
+      - CN_speednode_0016
+      - CN_speednode_0017
+      - defaultName_1
+      - CN_speednode_0019
+      - defaultName_2
+      - CN_speednode_0021
+      - CN_speednode_0022
+      - CN_speednode_0023
+      - defaultName_3
+      - CN_speednode_0025
+      - defaultName_4
+      - CN_speednode_0029
+      - CN_speednode_0030
+      - CN_speednode_0032
+      - CN_speednode_0034
+      - CN_speednode_0036
+      - CN_speednode_0038
+      - CN_speednode_0039
+      - FR_speednode_0085
+      - FR_speednode_0087
+      - GB_speednode_0093
+      - GB_speednode_0094
+      - KR_speednode_0167
+      - KR_speednode_0168
+      - KR_speednode_0177
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇰🇷 |KR|韩国|@wxgqlfx|26
-      - 🇺🇸 |US|美国|@wxgqlfx|126
-      - 🇺🇸 |US|美国|@wxgqlfx|226
-      - 🇺🇸 |US|美国|@wxgqlfx|232
-      - 🇺🇸 |US|美国|@wxgqlfx|237
-      - 🇺🇸 |US|美国|@wxgqlfx|241
-      - 🇸🇬 |SG|新加坡|@wxgqlfx|246
-      - 🇺🇸 |US|美国|@wxgqlfx|247
-      - 🇸🇬 |SG|新加坡|@wxgqlfx|249
-      - 🇺🇸 |US|美国|@wxgqlfx|288
+      - CN_speednode_0002
+      - CN_speednode_0003
+      - CN_speednode_0004
+      - CN_speednode_0005
+      - CN_speednode_0006
+      - CN_speednode_0007
+      - CN_speednode_0008
+      - CN_speednode_0009
+      - CN_speednode_0010
+      - CN_speednode_0011
+      - CN_speednode_0012
+      - CN_speednode_0013
+      - CN_speednode_0014
+      - CN_speednode_0015
+      - CN_speednode_0016
+      - CN_speednode_0017
+      - defaultName_1
+      - CN_speednode_0019
+      - defaultName_2
+      - CN_speednode_0021
+      - CN_speednode_0022
+      - CN_speednode_0023
+      - defaultName_3
+      - CN_speednode_0025
+      - defaultName_4
+      - CN_speednode_0029
+      - CN_speednode_0030
+      - CN_speednode_0032
+      - CN_speednode_0034
+      - CN_speednode_0036
+      - CN_speednode_0038
+      - CN_speednode_0039
+      - FR_speednode_0085
+      - FR_speednode_0087
+      - GB_speednode_0093
+      - GB_speednode_0094
+      - KR_speednode_0167
+      - KR_speednode_0168
+      - KR_speednode_0177
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🇰🇷 |KR|韩国|@wxgqlfx|26
-      - 🇺🇸 |US|美国|@wxgqlfx|126
-      - 🇺🇸 |US|美国|@wxgqlfx|226
-      - 🇺🇸 |US|美国|@wxgqlfx|232
-      - 🇺🇸 |US|美国|@wxgqlfx|237
-      - 🇺🇸 |US|美国|@wxgqlfx|241
-      - 🇸🇬 |SG|新加坡|@wxgqlfx|246
-      - 🇺🇸 |US|美国|@wxgqlfx|247
-      - 🇸🇬 |SG|新加坡|@wxgqlfx|249
-      - 🇺🇸 |US|美国|@wxgqlfx|288
+      - CN_speednode_0002
+      - CN_speednode_0003
+      - CN_speednode_0004
+      - CN_speednode_0005
+      - CN_speednode_0006
+      - CN_speednode_0007
+      - CN_speednode_0008
+      - CN_speednode_0009
+      - CN_speednode_0010
+      - CN_speednode_0011
+      - CN_speednode_0012
+      - CN_speednode_0013
+      - CN_speednode_0014
+      - CN_speednode_0015
+      - CN_speednode_0016
+      - CN_speednode_0017
+      - defaultName_1
+      - CN_speednode_0019
+      - defaultName_2
+      - CN_speednode_0021
+      - CN_speednode_0022
+      - CN_speednode_0023
+      - defaultName_3
+      - CN_speednode_0025
+      - defaultName_4
+      - CN_speednode_0029
+      - CN_speednode_0030
+      - CN_speednode_0032
+      - CN_speednode_0034
+      - CN_speednode_0036
+      - CN_speednode_0038
+      - CN_speednode_0039
+      - FR_speednode_0085
+      - FR_speednode_0087
+      - GB_speednode_0093
+      - GB_speednode_0094
+      - KR_speednode_0167
+      - KR_speednode_0168
+      - KR_speednode_0177
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇰🇷 |KR|韩国|@wxgqlfx|26
-      - 🇺🇸 |US|美国|@wxgqlfx|126
-      - 🇺🇸 |US|美国|@wxgqlfx|226
-      - 🇺🇸 |US|美国|@wxgqlfx|232
-      - 🇺🇸 |US|美国|@wxgqlfx|237
-      - 🇺🇸 |US|美国|@wxgqlfx|241
-      - 🇸🇬 |SG|新加坡|@wxgqlfx|246
-      - 🇺🇸 |US|美国|@wxgqlfx|247
-      - 🇸🇬 |SG|新加坡|@wxgqlfx|249
-      - 🇺🇸 |US|美国|@wxgqlfx|288
+      - CN_speednode_0002
+      - CN_speednode_0003
+      - CN_speednode_0004
+      - CN_speednode_0005
+      - CN_speednode_0006
+      - CN_speednode_0007
+      - CN_speednode_0008
+      - CN_speednode_0009
+      - CN_speednode_0010
+      - CN_speednode_0011
+      - CN_speednode_0012
+      - CN_speednode_0013
+      - CN_speednode_0014
+      - CN_speednode_0015
+      - CN_speednode_0016
+      - CN_speednode_0017
+      - defaultName_1
+      - CN_speednode_0019
+      - defaultName_2
+      - CN_speednode_0021
+      - CN_speednode_0022
+      - CN_speednode_0023
+      - defaultName_3
+      - CN_speednode_0025
+      - defaultName_4
+      - CN_speednode_0029
+      - CN_speednode_0030
+      - CN_speednode_0032
+      - CN_speednode_0034
+      - CN_speednode_0036
+      - CN_speednode_0038
+      - CN_speednode_0039
+      - FR_speednode_0085
+      - FR_speednode_0087
+      - GB_speednode_0093
+      - GB_speednode_0094
+      - KR_speednode_0167
+      - KR_speednode_0168
+      - KR_speednode_0177
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -210,16 +413,45 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇰🇷 |KR|韩国|@wxgqlfx|26
-      - 🇺🇸 |US|美国|@wxgqlfx|126
-      - 🇺🇸 |US|美国|@wxgqlfx|226
-      - 🇺🇸 |US|美国|@wxgqlfx|232
-      - 🇺🇸 |US|美国|@wxgqlfx|237
-      - 🇺🇸 |US|美国|@wxgqlfx|241
-      - 🇸🇬 |SG|新加坡|@wxgqlfx|246
-      - 🇺🇸 |US|美国|@wxgqlfx|247
-      - 🇸🇬 |SG|新加坡|@wxgqlfx|249
-      - 🇺🇸 |US|美国|@wxgqlfx|288
+      - CN_speednode_0002
+      - CN_speednode_0003
+      - CN_speednode_0004
+      - CN_speednode_0005
+      - CN_speednode_0006
+      - CN_speednode_0007
+      - CN_speednode_0008
+      - CN_speednode_0009
+      - CN_speednode_0010
+      - CN_speednode_0011
+      - CN_speednode_0012
+      - CN_speednode_0013
+      - CN_speednode_0014
+      - CN_speednode_0015
+      - CN_speednode_0016
+      - CN_speednode_0017
+      - defaultName_1
+      - CN_speednode_0019
+      - defaultName_2
+      - CN_speednode_0021
+      - CN_speednode_0022
+      - CN_speednode_0023
+      - defaultName_3
+      - CN_speednode_0025
+      - defaultName_4
+      - CN_speednode_0029
+      - CN_speednode_0030
+      - CN_speednode_0032
+      - CN_speednode_0034
+      - CN_speednode_0036
+      - CN_speednode_0038
+      - CN_speednode_0039
+      - FR_speednode_0085
+      - FR_speednode_0087
+      - GB_speednode_0093
+      - GB_speednode_0094
+      - KR_speednode_0167
+      - KR_speednode_0168
+      - KR_speednode_0177
 
 rules:
 # 本地/局域网地址
