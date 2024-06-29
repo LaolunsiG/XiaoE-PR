@@ -1,0 +1,723 @@
+# Clash_Meta XiaoE配置,此配置文件无加密DNS，优选节点
+# 感谢Clash莫离配置，懒人配置和可莉配置
+# 莫离配置地址：https://github.com/Moli-X/Resources/raw/main/Clash/Clash.yml
+# 图标备用📮✉️📪📬💫💬💥🔨🥼🚫🔰🙈🍎🎬📺🎱🍐🐝🦁💡🌵🐯🎸💻📽🌏🕹📡🦑🌟🐷🦒🐳🚦📵🎧💊🔓🚦🚥🐼⛔️🈲🌐🎯🖲️🐦🔞🎵📱🚀💳♻️🙈🍱🔂📦🔀⏱
+
+# 锚点-节点订阅的参数 [每12小时更新一次订阅节点，每 600 秒一次健康检查]
+# url:机场订阅链接，使用 Clash 链接
+# filter:初步筛选需要的节点，可有效减轻路由器压力，支持正则表达式，不筛选可删除此配置项
+# health-check:未选择到当前代理集合时，不会进行测试，有多个代理集合时可使用
+NodeParam: &NodeParam {type: http, interval: 43200, health-check: {enable: true, lazy: true, url: 'http://www.google.com/generate_204', interval: 600}}
+
+#代理集
+#代理集
+proxy-providers:
+  机场1:
+    url: "https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash"
+    <<: *NodeParam #使用上述订阅配置
+    path: ./proxies/airport1.yaml
+    override:
+      additional-prefix: "[机场名称1]" # 为订阅节点添加机场名称前缀
+  机场2:
+    url: "https://api.ytools.cc/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2Fwentao883%2FTG-wxgqlfx_BYDY%2Fmain%2Fpdyjdy_BYDY&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_NoAuto.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true"
+    <<: *NodeParam
+    path: ./proxies/airport1.yaml
+    override:
+      additional-prefix: "[机场名称1]"
+  机场3:
+    url: "https://yellowsea.xn--9kqa348u.org/api/v1/client/subscribe?token=918a5b2ffa256cea273acf49568de8df"
+    <<: *NodeParam
+    path: ./proxies/airport1.yaml
+    override:
+      additional-prefix: "[机场名称1]"
+  机场4:
+    url: "https://raw.githubusercontent.com/yaney01/Yaney01/main/temporary"
+    <<: *NodeParam
+    path: ./proxies/airport1.yaml
+    override:
+      additional-prefix: "[机场名称1]"
+  机场5:
+    url: "https://api.yuansu.app/api/v1/client/subscribe?token=d77acbf253b0485765e7516dddfa19bd"
+    <<: *NodeParam
+    path: ./proxies/airport1.yaml
+    override:
+      additional-prefix: "[机场名称1]"
+  机场6:
+    url: "https://sub.tgzdyz2.xyz/sub"
+    <<: *NodeParam
+    path: ./proxies/airport1.yaml
+    override:
+      additional-prefix: "[机场名称1]"
+  机场7:
+    url: "http://api.zzzzzl.me/api/v1/client/subscribe?token=97b91df444afd8e91fe143412e41e5aa"
+    <<: *NodeParam
+    path: ./proxies/airport1.yaml
+    override:
+      additional-prefix: "[机场名称1]"
+  机场8:
+    url: "https://flynb.site/sub?token=F9F9zZcllpdyN5TluF9F9zZF9F9zZ11EEfx0g&tag=mixed"
+    <<: *NodeParam
+    path: ./proxies/airport1.yaml
+    override:
+      additional-prefix: "[机场名称1]"
+  机场9:
+     url: "https://raw.githubusercontent.com/zhangkaiitugithub/passcro/main/speednodes.yaml"
+    <<: *NodeParam
+    path: ./proxies/airport1.yaml
+    override:
+      additional-prefix: "[机场名称1]"
+  机场10:
+    url: "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/vmess"
+    <<: *NodeParam
+    path: ./proxies/airport1.yaml
+    override:
+      additional-prefix: "[机场名称1]"
+      
+#全局配置
+mixed-port: 7890
+#tproxy-port: 7894 #tproxy 端口仅限 linux(Android) 适用
+
+allow-lan: true
+bind-address: "*"
+mode: rule
+log-level: info
+ipv6: false
+find-process-mode: strict
+unified-delay: false #统一延迟，进行两次延迟测试，以消除连接握手等带来的不同类型节点的延迟差异
+tcp-concurrent: true #TCP并发
+global-client-fingerprint: chrome
+
+external-controller: 127.0.0.1:9090 #只允许本地访问
+# external-ui: ui
+# external-ui-url: 'https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip' # UI界面
+secret: "xiaoe" #访问密码
+
+geodata-mode: false #false，使用mmdb文件，默认为false，使用dat文件
+geodata-loader: standard # 标准加载器
+geo-auto-update: true
+geo-update-interval: 24 #每24小时更新一次
+#GEO文件更新地址
+geox-url:
+  # geoip: 'https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/geoip.dat'
+  # geosite: 'https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/geosite.dat'
+  mmdb: 'https://gitlab.com/Masaiki/GeoIP2-CN/-/raw/release/Country.mmdb'
+  asn: 'https://gitlab.com/Loon0x00/loon_data/-/raw/main/geo/GeoLite2-ASN.mmdb'
+
+profile: {store-selected: true, store-fake-ip: true}
+
+sniffer:
+  enable: true
+  force-dns-mapping: true #对redir-host类型识别的流量进行强制嗅探
+  parse-pure-ip: true #对所有未获取到域名的流量进行强制嗅探
+  override-destination: true #访问嗅探后的地址
+  sniff: {HTTP: {ports: [80, 8080-8880], override-destination: true}, TLS: {ports: [443, 8443]}, QUIC: {ports: [443, 8443]}}
+  force-domain: 
+    - +.v2ex.com
+  skip-domain: ['Mijia Cloud']
+  
+tun:
+  enable: true
+  stack: mixed
+  dns-hijack: ['any:53']
+  auto-route: true
+  auto-detect-interface: true
+  strict-route: true
+  
+dns:
+  enable: true
+  prefer-h3: true
+  ipv6: true
+  default-nameserver: #默认 DNS, 用于解析"nameserver"将域名解析为IP地址
+    - 119.29.29.29
+#    - https://223.5.5.5/dns-query
+#    - https://1.12.12.12/dns-query
+#    - https://1.1.1.1/dns-query
+  listen: 0.0.0.0:1053
+  fake-ip-range: 198.18.0.1/16
+  enhanced-mode: fake-ip
+  fake-ip-filter:
+    - '*.lan'
+    - '*.localdomain'
+    - '*.example'
+    - '*.invalid'
+    - '*.localhost'
+    - '*.test'
+    - '*.local'
+    - '*.home.arpa'
+    - 'time.*.com'
+    - 'time.*.gov'
+    - 'time.*.edu.cn'
+    - 'time.*.apple.com'
+    - 'time-ios.apple.com'
+    - 'time1.*.com'
+    - 'time2.*.com'
+    - 'time3.*.com'
+    - 'time4.*.com'
+    - 'time5.*.com'
+    - 'time6.*.com'
+    - 'time7.*.com'
+    - 'ntp.*.com'
+    - 'ntp1.*.com'
+    - 'ntp2.*.com'
+    - 'ntp3.*.com'
+    - 'ntp4.*.com'
+    - 'ntp5.*.com'
+    - 'ntp6.*.com'
+    - 'ntp7.*.com'
+    - '*.time.edu.cn'
+    - '*.ntp.org.cn'
+    - '+.pool.ntp.org'
+    - 'time1.cloud.tencent.com'
+    - 'music.163.com'
+    - '*.music.163.com'
+    - '*.126.net'
+    - 'musicapi.taihe.com'
+    - 'music.taihe.com'
+    - 'songsearch.kugou.com'
+    - 'trackercdn.kugou.com'
+    - '*.kuwo.cn'
+    - 'api-jooxtt.sanook.com'
+    - 'api.joox.com'
+    - 'joox.com'
+    - 'y.qq.com'
+    - '*.y.qq.com'
+    - 'streamoc.music.tc.qq.com'
+    - 'mobileoc.music.tc.qq.com'
+    - 'isure.stream.qqmusic.qq.com'
+    - 'dl.stream.qqmusic.qq.com'
+    - 'aqqmusic.tc.qq.com'
+    - 'amobile.music.tc.qq.com'
+    - '*.xiami.com'
+    - '*.music.migu.cn'
+    - 'music.migu.cn'
+    - '+.msftconnecttest.com'
+    - '+.msftncsi.com'
+    - 'localhost.ptlogin2.qq.com'
+    - 'localhost.sec.qq.com'
+    - '+.qq.com'
+    - '+.tencent.com'
+    - '+.srv.nintendo.net'
+    - '*.n.n.srv.nintendo.net'
+    - '+.stun.playstation.net'
+    - 'xbox.*.*.microsoft.com'
+    - '*.*.xboxlive.com'
+    - 'xbox.*.microsoft.com'
+    - 'xnotify.xboxlive.com'
+    - '+.battlenet.com.cn'
+    - '+.wotgame.cn'
+    - '+.wggames.cn'
+    - '+.wowsgame.cn'
+    - '+.wargaming.net'
+    - 'proxy.golang.org'
+    - 'stun.*.*'
+    - 'stun.*.*.*'
+    - '+.stun.*.*'
+    - '+.stun.*.*.*'
+    - '+.stun.*.*.*.*'
+    - '+.stun.*.*.*.*.*'
+    - 'heartbeat.belkin.com'
+    - '*.linksys.com'
+    - '*.linksyssmartwifi.com'
+    - '*.router.asus.com'
+    - 'mesu.apple.com'
+    - 'swscan.apple.com'
+    - 'swquery.apple.com'
+    - 'swdownload.apple.com'
+    - 'swcdn.apple.com'
+    - 'swdist.apple.com'
+    - 'lens.l.google.com'
+    - 'stun.l.google.com'
+    - 'na.b.g-tun.com'
+    - '+.nflxvideo.net'
+    - '*.square-enix.com'
+    - '*.finalfantasyxiv.com'
+    - '*.ffxiv.com'
+    - '*.ff14.sdo.com'
+    - 'ff.dorado.sdo.com'
+    - '*.mcdn.bilivideo.cn'
+    - '+.media.dssott.com'
+    - 'shark007.net'
+    - 'Mijia Cloud'
+    - '+.cmbchina.com'
+    - '+.cmbimg.com'
+    - 'local.adguard.org'
+    - 'static.adtidy.org'
+    - '+.sandai.net'
+    - '+.n0808.com'
+    - '+.3gppnetwork.org'
+    - 'adguardteam.github.io'
+    - 'anti-ad.net'
+  nameserver:
+    - 1.1.1.1
+    - 223.5.5.5
+    - 114.114.114.114
+#    - https://doh.apad.pro/dns-query
+#    - https://dns.alidns.com/dns-query
+#    - https://doh.pub/dns-query
+#    - quic://dns.adguard.com:853
+#    - doq://test.dns.nextdns.io:853
+#  nameserver-policy: #指定域名查询的解析服务器
+#    'rule-set:BanProgramAD': rcode://success
+#    'rule-set:microsoft-cn,apple-cn,google-cn,games-cn': [https://dns.alidns.com/dns-query, https://doh.pub/dns-query]
+#    'rule-set:cn1,cn2': [https://dns.alidns.com/dns-query, https://doh.pub/dns-query]
+#    'rule-set:proxy': ['https://dns.google/dns-query#🪜 代理域名', 'https://cloudflare-dns.com/dns-query#🪜 代理域名']
+
+#代理节点
+proxies: null
+
+# 锚点 - 节点筛选组
+## 亚洲
+FilterHK: &FilterHK '^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+FilterTW: &FilterTW '^(?=.*((?i)🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+FilterJP: &FilterJP '^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+FilterKR: &FilterKR '^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|Korea)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+FilterSG: &FilterSG '^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+## 美洲
+FilterCA: $FilterCA '(?i)🇨🇦|加拿大|CA|渥太华'
+FilterUS: &FilterUS '^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+## 欧洲
+FilterUK: &FilterUK '^(?=.*((?i)🇬🇧|英国|伦敦|(\b(UK|United Kingdom)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+FilterFR: &FilterFR '^(?=.*((?i)🇫🇷|法国|(\b(FR|France)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+FilterDE: &FilterDE '^(?=.*((?i)🇩🇪|德国|(\b(DE|Germany)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+## 非洲
+FilterIN: &FilterIN '(?i)🇮🇳|印度|IN|IND|孟买|新德里|高知|Republic of India|India'
+## 其他
+FilterGame: &FilterGame '^(?=.*((?i)游戏|🎮|(\b(GAME)\b)))(?!.*((?i)回国|校园)).*$'
+FilterAll: &FilterAll '^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$'
+
+# 策略组参数锚点
+# 锚点 - 时延优选参数 [每 6 秒一次惰性健康检查，容差 20ms，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
+UrlTest: &UrlTest {type: url-test, interval: 6, tolerance: 20, lazy: true, url: 'http://cp.cloudflare.com', disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: true, include-all-providers: true}
+# 锚点 - 故障转移参数 [每 6 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
+FallBack: &FallBack {type: fallback, interval: 6, lazy: true, url: 'http://cp.cloudflare.com', disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: true, include-all-providers: true}
+# 锚点 - 负载均衡参数 [每 6 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
+LoadBalance: &LoadBalance {type: load-balance, interval: 6, lazy: true, url: 'http://cp.cloudflare.com', disable-udp: false, strategy: consistent-hashing, timeout: 2000, max-failed-times: 3, hidden: true, include-all-providers: true}
+
+#策略组
+proxy-groups:
+  # 手动选择(select)国家或地区节点；根据“国家或地区策略组”名称对 `proxies` 值进行增删改，须一一对应
+  - {name: 🚀 节点选择, type: select, proxies: [♻️ 自动选择, 🤣 手动选择, 机场1, 机场2, 机场3, 机场4, 机场5, 机场6, 机场7, 机场8, 机场9, 机场10, 香港, 台湾, 日本, 韩国, 新加坡, 加拿大, 美国, 英国, 法国, 德国, 印度]}
+  - {name: ♻️ 自动选择, type: url-test,, interval: 6, tolerance: 50, lazy: true, include-all-providers: true, url: 'https://www.gstatic.com/generate_204', timeout: 2000, max-failed-times: 3}
+  - {name: 🤣 手动选择, type: select, use: [机场1, 机场2, 机场3, 机场4, 机场5, 机场6, 机场7, 机场8, 机场9, 机场10]}
+  - {name: 🐟 漏网之鱼, type: select, proxies: [🚀 节点选择, 🎯 全球直连, 香港, 台湾, 日本, 韩国, 新加坡, 加拿大, 美国, 英国, 法国, 德国, 印度]} 
+  #机场测试
+  - {name: 机场1, type: url-test, interval: 6, tolerance: 50, lazy: true, use: [机场1], url: 'https://www.gstatic.com/generate_204', timeout: 2000, max-failed-times: 3}
+  - {name: 机场2, type: url-test, interval: 6, tolerance: 50, lazy: true, use: [机场2], url: 'https://www.gstatic.com/generate_204', timeout: 2000, max-failed-times: 3}
+  - {name: 机场3, type: url-test, interval: 6, tolerance: 50, lazy: true, use: [机场3], url: 'https://www.gstatic.com/generate_204', timeout: 2000, max-failed-times: 3}
+  - {name: 机场4, type: url-test, interval: 6, tolerance: 50, lazy: true, use: [机场4], url: 'https://www.gstatic.com/generate_204', timeout: 2000, max-failed-times: 3}
+  - {name: 机场5, type: url-test, interval: 6, tolerance: 50, lazy: true, use: [机场5], url: 'https://www.gstatic.com/generate_204', timeout: 2000, max-failed-times: 3}
+  - {name: 机场6, type: url-test, interval: 6, tolerance: 50, lazy: true, use: [机场6], url: 'https://www.gstatic.com/generate_204', timeout: 2000, max-failed-times: 3}
+  - {name: 机场7, type: url-test, interval: 6, tolerance: 50, lazy: true, use: [机场7], url: 'https://www.gstatic.com/generate_204', timeout: 2000, max-failed-times: 3}
+  - {name: 机场8, type: url-test, interval: 6, tolerance: 50, lazy: true, use: [机场8], url: 'https://www.gstatic.com/generate_204', timeout: 2000, max-failed-times: 3}
+  - {name: 机场9, type: url-test, interval: 6, tolerance: 50, lazy: true, use: [机场9], url: 'https://www.gstatic.com/generate_204', timeout: 2000, max-failed-times: 3}
+  - {name: 机场10, type: url-test, interval: 6, tolerance: 50, lazy: true, use: [机场10], url: 'https://www.gstatic.com/generate_204', timeout: 2000, max-failed-times: 3}
+  # 选择`🎯 全球直连`为测试本地网络（运营商网络速度和 IPv6 支持情况），可选择其它节点用于测试机场节点速度和 IPv6 支持情况
+  - {name: 📈 网络测试, type: select, proxies: [🤣 手动选择, 🎯 全球直连, 🚀 节点选择, 香港, 台湾, 日本, 韩国, 新加坡, 加拿大, 美国, 英国, 法国, 德国, 印度]}
+#人工智能
+  - {name: 🤖 人工智能, type: select, proxies: [香港, 台湾, 日本, 韩国, 新加坡, 加拿大, 美国, 英国, 法国, 德国, 印度, 🚀 节点选择]}
+#下载网络
+  - {name: 🌐 Download,type: select, proxies: [🎯 全球直连, 🚀 节点选择, 香港, 台湾, 日本, 韩国, 新加坡, 加拿大, 美国, 英国, 法国, 德国, 印度]}
+#服务平台
+  - {name: Ⓜ️ 微软服务, type: select, proxies: [🎯 全球直连, 🚀 节点选择]}
+  - {name: 📢 谷歌服务, type: select, proxies: [🚀 节点选择, 香港, 台湾, 日本, 韩国, 新加坡, 加拿大, 美国, 英国, 法国, 德国, 印度]}
+  - {name: 🍎 苹果服务, type: select, proxies: [🎯 全球直连, 🚀 节点选择]}
+#聊天平台
+  - {name: 💬 Facebook, type: select, proxies: [香港, 🚀 节点选择, 台湾, 日本, 韩国, 新加坡, 加拿大, 美国, 英国, 法国, 德国, 印度]} 
+  - {name: 💬 Twitter, type: select, proxies: [🚀 节点选择, 香港, 台湾, 日本, 韩国, 新加坡, 加拿大, 美国, 英国, 法国, 德国, 印度]}
+  - {name: 📲 电报消息, type: select, proxies: [🚀 节点选择, 香港, 台湾, 日本, 韩国, 新加坡, 加拿大, 美国, 英国, 法国, 德国, 印度]}
+  - {name: 🐦 Discord, type: select, proxies: [🚀 节点选择, 香港, 台湾, 日本, 韩国, 新加坡, 加拿大, 美国, 英国, 法国, 德国, 印度]} 
+#流媒体
+##小分流
+  - {name: 🎥 奈飞视频, type: select, proxies: [美国, 🚀 节点选择, 香港, 台湾, 日本, 韩国, 新加坡, 加拿大, 英国, 法国, 德国, 印度]}
+  - {name: 📽️ 迪士尼+, type: select, proxies: [🚀 节点选择, 香港, 台湾, 日本, 韩国, 新加坡, 加拿大, 美国, 英国, 法国, 德国, 印度]}
+  - {name: 🎞️ Max, type: select, proxies: [🚀 节点选择, 香港, 台湾, 日本, 韩国, 新加坡, 加拿大, 美国, 英国, 法国, 德国, 印度]}
+  - {name: 🎬 Prime Video, type: select, proxies: [🚀 节点选择, 香港, 台湾, 日本, 韩国, 新加坡, 加拿大, 美国, 英国, 法国, 德国, 印度]}
+  - {name: 🍎 Apple TV+, type: select, proxies: [🚀 节点选择, 香港, 台湾, 日本, 韩国, 新加坡, 加拿大, 美国, 英国, 法国, 德国, 印度]}
+  - {name: 📹 YouTube, type: select, proxies: [🚀 节点选择, 香港, 台湾, 日本, 韩国, 新加坡, 加拿大, 美国, 英国, 法国, 德国, 印度]}
+  - {name: 🎵 TikTok, type: select, proxies: [🚀 节点选择, 香港, 台湾, 日本, 韩国, 新加坡, 加拿大, 美国, 英国, 法国, 德国, 印度]}
+  - {name: 📺 哔哩哔哩, type: select, proxies: [🎯 全球直连, 🚀 节点选择, 香港, 台湾, 日本, 韩国, 新加坡, 加拿大, 美国, 英国, 法国, 德国, 印度]}
+##大分流
+  - {name: 📺 国内媒体, type: select, proxies: [🎯 全球直连, 🚀 节点选择]}
+  - {name: 🙈 国外媒体, type: select, proxies: [🚀 节点选择, 香港, 台湾, 日本, 韩国, 新加坡, 加拿大, 美国, 英国, 法国, 德国, 印度]}
+#支付平台
+  - {name: 💴 PayPal, type: select, proxies: [美国, 香港, 台湾, 日本, 韩国, 新加坡, 加拿大, 美国, 英国, 法国, 德国, 印度, 🚀 节点选择]}
+#游戏
+  - {name: 🎮 游戏平台(global), type: select, proxies: [🚀 节点选择, 🎯 全球直连, 香港, 台湾, 日本, 韩国, 新加坡, 加拿大, 美国, 英国, 法国, 德国, 印度]}
+  - {name: 🎮 游戏平台(cn), type: select, proxies: [🎯 全球直连, 🚀 节点选择]}
+#大分流
+  - {name: 🪜 代理域名, type: select, proxies: [🚀 节点选择, 🎯 全球直连]}
+  - {name: 🔗 直连域名, type: select, proxies: [🎯 全球直连, 🚀 节点选择]}
+  - {name: 🛑 全球拦截, type: select, proxies: [REJECT]}
+  - {name: 🎯 全球直连, type: select, proxies: [DIRECT]}
+  # ----------------国家或地区策略组--------------------
+# 地区节点选择
+# 节点负载均衡(load-balance)，即将请求均匀分配到多个节点上，优点是更稳定，速度可能有提升；将相同顶级域名的请求分配给策略组内的同一个代理节点；推荐在节点复用比较多的情况下使用
+# 自动选择节点(url-test)，即按照 url 测试结果使用延迟最低的节点；测试后容差大于 50ms 才会切换到延迟低的那个节点；未选择到当前策略组时不会进行延迟测试；筛选出“香港”节点，支持正则表达式
+# 亚洲
+  - {name: 香港, type: select, proxies: [⏱香港时延优选策略组, 🚥香港故障转移策略组, 🎛香港负载均衡策略组]}
+  - {name: 台湾, type: select, proxies: [⏱台湾时延优选策略组, 🚥台湾故障转移策略组, 🎛台湾负载均衡策略组]}
+  - {name: 日本, type: select, proxies: [⏱日本时延优选策略组, 🚥日本故障转移策略组, 🎛日本负载均衡策略组]}
+  - {name: 韩国, type: select, proxies: [⏱韩国时延优选策略组, 🚥韩国故障转移策略组, 🎛韩国负载均衡策略组]}
+  - {name: 新加坡, type: select, proxies: [⏱新加坡时延优选策略组, 🚥新加坡故障转移策略组, 🎛新加坡负载均衡策略组]}
+# 美洲
+  - {name: 加拿大, type: select, proxies: [⏱加拿大时延优选策略组, 🚥加拿大故障转移策略组, 🎛加拿大负载均衡策略组]}
+  - {name: 美国, type: select, proxies: [⏱美国时延优选策略组, 🚥美国故障转移策略组, 🎛美国负载均衡策略组]}
+# 欧洲  
+  - {name: 英国, type: select, proxies: [⏱英国时延优选策略组, 🚥英国故障转移策略组, 🎛英国负载均衡策略组]}
+  - {name: 法国, type: select, proxies: [⏱法国时延优选策略组, 🚥法国故障转移策略组, 🎛法国负载均衡策略组]}
+  - {name: 德国, type: select, proxies: [⏱德国时延优选策略组, 🚥德国故障转移策略组, 🎛德国负载均衡策略组]}
+# 非洲
+  - {name: 印度, type: select, proxies: [⏱印度时延优选策略组, 🚥印度故障转移策略组, 🎛印度负载均衡策略组]}
+# 时延优选策略组
+## 亚洲
+  - {name: ⏱香港时延优选策略组, <<: *UrlTest, filter: *FilterHK}
+  - {name: ⏱台湾时延优选策略组, <<: *UrlTest, filter: *FilterTW}
+  - {name: ⏱日本时延优选策略组, <<: *UrlTest, filter: *FilterJP}
+  - {name: ⏱韩国时延优选策略组, <<: *UrlTest, filter: *FilterKR}
+  - {name: ⏱新加坡时延优选策略组, <<: *UrlTest, filter: *FilterSG}
+# 美洲
+  - {name: ⏱加拿大时延优选策略组, <<: *UrlTest, filter: *FilterCA}
+  - {name: ⏱美国时延优选策略组, <<: *UrlTest, filter: *FilterUS}
+## 欧洲
+  - {name: ⏱英国时延优选策略组, <<: *UrlTest, filter: *FilterUK}
+  - {name: ⏱法国时延优选策略组, <<: *UrlTest, filter: *FilterFR}
+  - {name: ⏱德国时延优选策略组, <<: *UrlTest, filter: *FilterDE}
+## 非洲
+  - {name: ⏱印度时延优选策略组, <<: *UrlTest, filter: *FilterIN}
+# 故障转移策略组
+## 亚洲
+  - {name: 🚥香港故障转移策略组, <<: *FallBack, filter: *FilterHK}
+  - {name: 🚥台湾故障转移策略组, <<: *FallBack, filter: *FilterTW}
+  - {name: 🚥日本故障转移策略组, <<: *FallBack, filter: *FilterJP}
+  - {name: 🚥韩国故障转移策略组, <<: *FallBack, filter: *FilterKR}
+  - {name: 🚥新加坡故障转移策略组, <<: *FallBack, filter: *FilterSG}
+# 美洲
+  - {name: 🚥加拿大故障转移策略组, <<: *FallBack, filter: *FilterCA}}
+  - {name: 🚥美国故障转移策略组, <<: *FallBack, filter: *FilterUS}
+## 欧洲
+  - {name: 🚥英国故障转移策略组, <<: *FallBack, filter: *FilterUK}
+  - {name: 🚥法国故障转移策略组, <<: *FallBack, filter: *FilterFR}
+  - {name: 🚥德国故障转移策略组, <<: *FallBack, filter: *FilterIN}
+## 非洲
+  - {name: 🚥印度故障转移策略组, <<: *FallBack, filter: *FilterDE}
+# 负载均衡策略组
+## 亚洲
+  - {name: 🎛香港负载均衡策略组, <<: *LoadBalance, filter: *FilterHK}
+  - {name: 🎛台湾负载均衡策略组, <<: *LoadBalance, filter: *FilterTW}
+  - {name: 🎛日本负载均衡策略组, <<: *LoadBalance, filter: *FilterJP}
+  - {name: 🎛韩国负载均衡策略组, <<: *LoadBalance, filter: *FilterKR}
+  - {name: 🎛新加坡负载均衡策略组, <<: *LoadBalance, filter: *FilterSG}
+## 美洲
+  - {name: 🎛加拿大负载均衡策略组, <<: *LoadBalance, filter: *FilterCA}
+  - {name: 🎛美国负载均衡策略组, <<: *LoadBalance, filter: *FilterUS}
+## 欧洲
+  - {name: 🎛英国负载均衡策略组, <<: *LoadBalance, filter: *FilterUK}
+  - {name: 🎛法国负载均衡策略组, <<: *LoadBalance, filter: *FilterFR}
+  - {name: 🎛德国负载均衡策略组, <<: *LoadBalance, filter: *FilterDE}
+## 非洲
+  - {name: 🎛印度负载均衡策略组, <<: *LoadBalance, filter: *FilterIN}
+
+# 锚点 - 规则参数 [每小时更新一次订阅规则，更新规则时使用直连策略],默认格式为yaml，可以更改为text。
+# bahavior：有ipcidr(IP集)、domain(域名集)、classical。
+# proxy：经过指定代理进行下载/更新，使用DIRECT（直连）更新，还是代理（PROXY）更新，默认为代理（PROXY）
+# rule-anchor:
+#  ip: &ip {type: http, interval: 86400, behavior: ipcidr, format: text}
+#  domain: &domain {type: http, interval: 86400, behavior: domain, format: text}
+#  RuleProviders: &RuleProviders {type: http, behavior: classical, interval: 86400, format: yaml, proxy: DIRECT}
+
+# 规则集（yaml 文件每天自动更新）
+rule-providers:
+#网络测试
+  networktest:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@clash/networktest.yaml"
+    path: ./ruleset/networktest.yaml
+    interval: 86400
+#下载网络
+  Download:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Download/Download_No_Resolve.yaml"
+    path: ./ruleset/Download.yaml
+    interval: 86400
+#广告拦截
+#  ads:
+#    type: http
+#    behavior: classical
+#    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingLite/AdvertisingLite_Classical_No_Resolve.yaml"
+#    path: ./ruleset/ads.yaml
+#    interval: 86400
+#隐私保护
+#  privacy:
+#    behavior: classical
+#    type: http
+#    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Privacy/Privacy_Classical_No_Resolve.yaml"
+#    interval: 86400
+#    path: ./ruleset/privacy.yaml
+#本地网络
+  lan:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan_No_Resolve.yaml"
+    path: ./ruleset/lancidr.yaml
+    interval: 86400
+#服务平台
+  microsoft:
+    type: http
+    behavior: classical
+    url: "https://whatshub.top/rule/Microsoft.rule"
+    path: ./ruleset/microsoft.yaml
+    interval: 86400
+##苹果服务
+  apple:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple_Classical_No_Resolve.yaml"
+    path: ./ruleset/apple.yaml
+    interval: 86400
+  applestore:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppStore/AppStore_No_Resolve.yaml"
+    path: ./ruleset/applestore.yaml
+    interval: 86400
+  AppleProxy:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppleProxy/AppleProxy_No_Resolve.yaml"
+    path: ./ruleset/AppleProxy.yaml
+    interval: 86400
+  google:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google_No_Resolve.yaml"
+    path: ./ruleset/google.yaml
+    interval: 86400
+#聊天平台
+  Discord:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Discord/Discord_No_Resolve.yaml"
+    path: ./ruleset/Discord.yaml
+    interval: 86400
+  Twitter:
+    behavior: classical
+    type: http
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter_No_Resolve.yaml"
+    interval: 86400
+    path: ./ruleset/Twitter.yaml
+  Facebook:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook_No_Resolve.yaml"
+    path: ./ruleset/Facebook.yaml
+    interval: 86400
+##telegram
+  Telegram:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram_No_Resolve.yaml"
+    path: ./ruleset/Telegram.yaml
+    interval: 86400
+##国外媒体
+###小分流
+  netflix:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix_Classical_No_Resolve.yaml"
+    path: ./ruleset/netflix.yaml
+    interval: 86400
+  disney:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@clash/disney.yaml"
+    path: ./ruleset/disney.yaml
+    interval: 86400
+  max:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@clash/max.yaml"
+    path: ./ruleset/max.yaml
+    interval: 86400
+  primevideo:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@clash/primevideo.yaml"
+    path: ./ruleset/primevideo.yaml
+    interval: 86400
+  appletv:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@clash/appletv.yaml"
+    path: ./ruleset/appletv.yaml
+    interval: 86400
+##YouTube
+  youtubemusic:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTubeMusic/YouTubeMusic_No_Resolve.yaml"
+    path: ./ruleset/youtubemusic.yaml
+    interval: 86400
+  youtube:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube_No_Resolve.yaml"
+    path: ./ruleset/youtube.yaml
+    interval: 86400
+  tiktok:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok_No_Resolve.yaml"
+    path: ./ruleset/tiktok.yaml
+    interval: 86400
+##大分流
+  GlobalMedia:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia_Classical_No_Resolve.yaml"
+    path: ./ruleset/GlobalMedia.yaml
+    interval: 86400
+#国内媒体
+##小分流
+  DouYin:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/DouYin/DouYin_No_Resolve.yaml"
+    path: ./ruleset/DouYin.yaml
+    interval: 86400
+  huya:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/HuYa/HuYa_No_Resolve.yaml"
+    path: ./ruleset/huya.yaml
+    interval: 86400
+  bilibili:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/DustinWin/ruleset_geodata@clash/bilibili.yaml"
+    path: ./ruleset/bilibili.yaml
+    interval: 86400
+  Douyu:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Douyu/Douyu_No_Resolve.yaml"
+    path: ./ruleset/Douyu.yaml
+    interval: 86400
+##大分流
+  ChinaMedia:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMedia/ChinaMedia_No_Resolve.yaml"
+    path: ./ruleset/ChinaMediayaml
+    interval: 86400
+#支付平台
+  PayPal:
+    behavior: classical
+    type: http
+    url: "https://whatshub.top/rule/PayPal.rule"
+    interval: 86400
+    path: ./ruleset/PayPal.yaml
+#人工智能
+  AI:
+    behavior: classical
+    type: http
+    url: "https://raw.githubusercontent.com/LaolunsiG/XiaoE-PCR/main/rules/Clash_Meta/AI/AI_Global.yaml"
+    interval: 86400
+    path: ./ruleset/AI.yaml
+#游戏平台
+  games-cn:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/DustinWin/ruleset_geodata@clash/games-cn.yaml"
+    path: ./ruleset/games-cn.yaml
+    interval: 86400
+  games-global:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/mphin/ProxyTools/main/rules/classical/GamesPlatform.yaml"
+    path: ./ruleset/games-global.yaml
+    interval: 86400
+#大分流
+  proxy:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/DustinWin/ruleset_geodata@clash/proxy.yaml"
+    path: ./ruleset/proxy.yaml
+    interval: 86400
+#大分流
+  cn1:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/China/China_Classical_No_Resolve.yaml"
+    path: ./ruleset/cn1.yaml
+    interval: 86400
+  cn2:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax_Classical_No_Resolve.yaml"
+    path: ./ruleset/cn2.yaml
+    interval: 86400
+rules:
+#网络测试
+  - RULE-SET,networktest,📈 网络测试
+#外部控制
+  - DOMAIN,clash.razord.top,🎯 全球直连
+  - DOMAIN,yacd.haishan.me,🎯 全球直连
+#下载网络
+  - RULE-SET,Download,🌐 Download
+#本地网络
+  - RULE-SET,lan,🎯 全球直连,no-resolve
+#广告拦截
+#  - RULE-SET,ads,🛑 全球拦截
+#隐私保护
+#  - RULE-SET,privacy,🛑 全球拦截
+#服务平台
+  - RULE-SET,microsoft,Ⓜ️ 微软服务
+##苹果服务
+  - RULE-SET,apple,🍎 苹果服务
+  - RULE-SET,applestore,🍎 苹果服务
+  - RULE-SET,AppleProxy,🚀 节点选择
+  - RULE-SET,google,📢 谷歌服务
+#人工智能
+  - RULE-SET,AI,🤖 人工智能
+#聊天平台
+##Telegram
+  - RULE-SET,Telegram,📲 电报消息
+  - RULE-SET,Discord,🐦 Discord
+  - RULE-SET,Twitter,💬 Twitter
+  - RULE-SET,tiktok,🎵 TikTok
+  - RULE-SET,Facebook,💬 Facebook
+#支付平台
+  - RULE-SET,PayPal,💴 PayPal
+#流媒体
+##国外媒体
+  - RULE-SET,netflix,🎥 奈飞视频
+  - RULE-SET,disney,📽️ 迪士尼+
+  - RULE-SET,max,🎞️ Max
+  - RULE-SET,primevideo,🎬 Prime Video
+  - RULE-SET,appletv,🍎 Apple TV+
+###YOUTUBE
+  - RULE-SET,youtubemusic,📹 YouTube
+  - RULE-SET,youtube,📹 YouTube
+###大分流
+  - RULE-SET,GlobalMedia,🙈 国外媒体
+##国内媒体
+  - RULE-SET,bilibili,📺 哔哩哔哩
+  - RULE-SET,huya,📺 国内媒体
+  - RULE-SET,DouYin,📺 国内媒体
+  - RULE-SET,Douyu,📺 国内媒体
+###大分流
+  - RULE-SET,ChinaMedia,📺 国内媒体
+#游戏
+  - RULE-SET,games-cn,🎮 游戏平台(cn)
+  - RULE-SET,games-global,🎮 游戏平台(global)
+#大分流
+  - RULE-SET,proxy,🪜 代理域名
+#大分流
+  - RULE-SET,cn1,🔗 直连域名
+#  - RULE-SET,cn2,🔗 直连域名
+##IP规则
+  - GEOIP,CN,DIRECT
+#兜底规则
+  - MATCH,🐟 漏网之鱼
