@@ -221,7 +221,7 @@ proxies: null
 #代理组
 proxy-groups:
   - {name: 🚀 节点选择, type: select, proxies: [♻️ 自动选择, 🤣 手动选择, 机场1, 机场2, 机场3, 机场4, 机场5, 香港, 台湾, 日本, 新加坡, 美国, 加拿大, 德国, 英国]}
-  - {name: ♻️ 自动选择, type: url-test, tolerance: 50, lazy: true, use: [机场1, 机场2, 机场3, 机场4, 机场5], url: http://www.google.com/generate_204, interval: 600}
+  - {name: ♻️ 自动选择, type: url-test, tolerance: 50, lazy: true, include-all-providers: true, url: http://www.google.com/generate_204, interval: 600}
   - {name: 🤣 手动选择, type: select, use: [机场1, 机场2, 机场3, 机场4, 机场5]}
   - {name: 🐟 漏网之鱼, type: select, proxies: [🚀 节点选择, 🎯 全球直连]}
 #  - {name: 🍃 应用净化, type: select, proxies: [🛑 全球拦截, 🎯 全球直连]}
