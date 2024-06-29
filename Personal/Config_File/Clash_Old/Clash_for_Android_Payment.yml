@@ -286,7 +286,7 @@ proxy-groups:
   - {name: 香港, type: select, proxies: [⏱香港节点优选, 🚥香港故障转移, 🎛香港负载均衡]}
   - {name: 台湾, type: select, proxies: [⏱台湾节点优选, 🚥台湾故障转移, 🎛台湾负载均衡]}
   - {name: 日本, type: select, proxies: [⏱日本节点优选, 🚥日本故障转移, 🎛日本负载均衡]}
-  - {name: 新加坡, type: select, proxies: [⏱新加坡节点优选, 🚥新加坡故障转移, 🎛新加坡负载均衡}
+  - {name: 新加坡, type: select, proxies: [⏱新加坡节点优选, 🚥新加坡故障转移, 🎛新加坡负载均衡]}
 ### 美洲
   - {name: 加拿大, type: select, proxies: [⏱加拿大节点优选, 🚥加拿大故障转移, 🎛加拿大负载均衡]}
   - {name: 美国, type: select, proxies: [⏱美国节点优选, 🚥美国故障转移, 🎛美国负载均衡]}
