@@ -21,55 +21,55 @@ proxy-providers:
   机场2:
     url: "https://api.ytools.cc/sub?target=clash&url=https%3A%2F%2Fraw.githubusercontent.com%2Fwentao883%2FTG-wxgqlfx_BYDY%2Fmain%2Fpdyjdy_BYDY&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_NoAuto.ini&emoji=true&list=false&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true"
     <<: *NodeParam
-    path: ./proxies/airport1.yaml
+    path: ./proxies/airport2.yaml
     override:
       additional-prefix: "[机场名称1]"
   机场3:
     url: "https://yellowsea.xn--9kqa348u.org/api/v1/client/subscribe?token=918a5b2ffa256cea273acf49568de8df"
     <<: *NodeParam
-    path: ./proxies/airport1.yaml
+    path: ./proxies/airport3.yaml
     override:
       additional-prefix: "[机场名称1]"
   机场4:
     url: "https://raw.githubusercontent.com/yaney01/Yaney01/main/temporary"
     <<: *NodeParam
-    path: ./proxies/airport1.yaml
+    path: ./proxies/airport4.yaml
     override:
       additional-prefix: "[机场名称1]"
   机场5:
     url: "https://api.yuansu.app/api/v1/client/subscribe?token=d77acbf253b0485765e7516dddfa19bd"
     <<: *NodeParam
-    path: ./proxies/airport1.yaml
+    path: ./proxies/airport5.yaml
     override:
       additional-prefix: "[机场名称1]"
   机场6:
     url: "https://sub.tgzdyz2.xyz/sub"
     <<: *NodeParam
-    path: ./proxies/airport1.yaml
+    path: ./proxies/airport6.yaml
     override:
       additional-prefix: "[机场名称1]"
   机场7:
     url: "http://api.zzzzzl.me/api/v1/client/subscribe?token=97b91df444afd8e91fe143412e41e5aa"
     <<: *NodeParam
-    path: ./proxies/airport1.yaml
+    path: ./proxies/airport7.yaml
     override:
       additional-prefix: "[机场名称1]"
   机场8:
     url: "https://flynb.site/sub?token=F9F9zZcllpdyN5TluF9F9zZF9F9zZ11EEfx0g&tag=mixed"
     <<: *NodeParam
-    path: ./proxies/airport1.yaml
+    path: ./proxies/airport8.yaml
     override:
       additional-prefix: "[机场名称1]"
   机场9:
-     url: "https://raw.githubusercontent.com/zhangkaiitugithub/passcro/main/speednodes.yaml"
+    url: "https://raw.githubusercontent.com/zhangkaiitugithub/passcro/main/speednodes.yaml"
     <<: *NodeParam
-    path: ./proxies/airport1.yaml
+    path: ./proxies/airport9.yaml
     override:
       additional-prefix: "[机场名称1]"
   机场10:
     url: "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/vmess"
     <<: *NodeParam
-    path: ./proxies/airport1.yaml
+    path: ./proxies/airport10.yaml
     override:
       additional-prefix: "[机场名称1]"
       
@@ -113,7 +113,8 @@ sniffer:
   sniff: {HTTP: {ports: [80, 8080-8880], override-destination: true}, TLS: {ports: [443, 8443]}, QUIC: {ports: [443, 8443]}}
   force-domain: 
     - +.v2ex.com
-  skip-domain: ['Mijia Cloud']
+  skip-domain: 
+    - Mijia Cloud
   
 tun:
   enable: true
@@ -297,7 +298,7 @@ LoadBalance: &LoadBalance {type: load-balance, interval: 6, lazy: true, url: 'ht
 proxy-groups:
   # 手动选择(select)国家或地区节点；根据“国家或地区策略组”名称对 `proxies` 值进行增删改，须一一对应
   - {name: 🚀 节点选择, type: select, proxies: [♻️ 自动选择, 🤣 手动选择, 机场1, 机场2, 机场3, 机场4, 机场5, 机场6, 机场7, 机场8, 机场9, 机场10, 香港, 台湾, 日本, 韩国, 新加坡, 加拿大, 美国, 英国, 法国, 德国, 印度]}
-  - {name: ♻️ 自动选择, type: url-test,, interval: 6, tolerance: 50, lazy: true, include-all-providers: true, url: 'https://www.gstatic.com/generate_204', timeout: 2000, max-failed-times: 3}
+  - {name: ♻️ 自动选择, type: url-test, interval: 6, tolerance: 50, lazy: true, include-all-providers: true, url: 'https://www.gstatic.com/generate_204', timeout: 2000, max-failed-times: 3}
   - {name: 🤣 手动选择, type: select, use: [机场1, 机场2, 机场3, 机场4, 机场5, 机场6, 机场7, 机场8, 机场9, 机场10]}
   - {name: 🐟 漏网之鱼, type: select, proxies: [🚀 节点选择, 🎯 全球直连, 香港, 台湾, 日本, 韩国, 新加坡, 加拿大, 美国, 英国, 法国, 德国, 印度]} 
   #机场测试
@@ -392,7 +393,7 @@ proxy-groups:
   - {name: 🚥韩国故障转移策略组, <<: *FallBack, filter: *FilterKR}
   - {name: 🚥新加坡故障转移策略组, <<: *FallBack, filter: *FilterSG}
 # 美洲
-  - {name: 🚥加拿大故障转移策略组, <<: *FallBack, filter: *FilterCA}}
+  - {name: 🚥加拿大故障转移策略组, <<: *FallBack, filter: *FilterCA}
   - {name: 🚥美国故障转移策略组, <<: *FallBack, filter: *FilterUS}
 ## 欧洲
   - {name: 🚥英国故障转移策略组, <<: *FallBack, filter: *FilterUK}
