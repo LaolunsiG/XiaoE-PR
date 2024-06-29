@@ -1,8 +1,15 @@
-# Clash_Meta XiaoE配置（由“Clash莫离配置和懒人配置”更改而来）
-# 此配置文件无加密DNS，优选节点
+# Clash_Meta XiaoE配置,此配置文件无加密DNS，优选节点
+# 感谢Clash莫离配置，懒人配置和可莉配置
 # 莫离配置地址：https://github.com/Moli-X/Resources/raw/main/Clash/Clash.yml
 # 图标备用📮✉️📪📬💫💬💥🔨🥼🚫🔰🙈🍎🎬📺🎱🍐🐝🦁💡🌵🐯🎸💻📽🌏🕹📡🦑🌟🐷🦒🐳🚦📵🎧💊🔓🚦🚥🐼⛔️🈲🌐🎯🖲️🐦🔞🎵📱🚀💳♻️🙈🍱🔂📦🔀⏱
-#代理集
+
+# 锚点-节点订阅的参数 [每12小时更新一次订阅节点，每 600 秒一次健康检查]
+# url:机场订阅链接，使用 Clash 链接
+# filter:初步筛选需要的节点，可有效减轻路由器压力，支持正则表达式，不筛选可删除此配置项
+# health-check:未选择到当前代理集合时，不会进行测试，有多个代理集合时可使用
+NodeParam: &NodeParam {type: http, interval: 43200, health-check: {enable: true, lazy: true, url: 'http://www.google.com/generate_204', interval: 600}}
+
+# 代理集
 proxy-providers:
   机场1:
     type: http
